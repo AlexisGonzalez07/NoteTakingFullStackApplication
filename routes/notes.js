@@ -19,7 +19,7 @@ notes.post('/', (req, res) => {
     const newNote = {
       title,
       text,
-      note_id: uuid(),
+      id: uuid(),
     };
 
     readAndAppend(newNote, './db/db.json');
@@ -31,21 +31,22 @@ notes.post('/', (req, res) => {
 
 // Delete Route for removing a note
 notes.delete('/:id', (req, res) => {
-    console.info(`${req.method} requrest received for notes`);
+    console.info(`${req.method} request received for notes`);
     console.log(req.body);
+// This needs to be transformed into a notes function
+    const noteId = req.params.id;
+  readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+      // Make a new array of all tips except the one with the ID provided in the URL
+      const result = json.filter((note) => note.id !== noteId);
 
-    const {title, text, note_id} = req.body
+      // Save that array to the filesystem
+      writeToFile('./db/db.json', result);
 
-    if (title && text && note_id) {
-        // Creating a variable to be compared to
-        const currentNote = {
-            title,
-            text,
-            note_id
-        };       //write a function below to read the file, loop and find the id, and then delete the note 
-
-    }
-    
+      // Respond to the DELETE request
+      res.json(`Item ${noteId} has been deleted 🗑️`);
+    });
 }
 )
 
