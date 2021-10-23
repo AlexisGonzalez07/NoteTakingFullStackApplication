@@ -23,7 +23,7 @@
 Given some starter code, I was tasked with connecting the front-end application with my back-end server using Express.js. This was accomplished by configuring my Express.js app to handle GET, POST, and DELETE requests and serve static files. Additionally, modular routing was implemented to facilitate future development by improving the code's readability and reducing its complexity.
 
 ## Installation <a name='installation'></a>
-There are no installation requirements to view this application as it is live on Heroku via the [following link](https://www.github.com/AlexisGonzalez07). However, if you would like to launch the application on your own server, you must open the root-nested server.js file, run the command npm i, and then launch the application by running node server.js in the terminal.
+There are no installation requirements to view this application as it is live on Heroku via the [following link](https://notatakingapplication.herokuapp.com/). However, if you would like to launch the application on your own server, you must open the root-nested server.js file, run the command npm i, and then launch the application by running node server.js in the terminal.
 
 ## Usage <a name='usage'></a>
 This application can be used by users looking to keep track of pending tasks, store notes and important information, or improve his/her/their organization.
