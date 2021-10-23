@@ -28,6 +28,21 @@ There are no installation requirements to view this application as it is live on
 ## Usage <a name='usage'></a>
 This application can be used by users looking to keep track of pending tasks, store notes and important information, or improve his/her/their organization.
 
+Initially, the user is taken to this landing page:
+![image](./screenshots/Note-Taker-Homepage.png)
+
+After clicking get started, the user is redirected and can type their first note:
+![image](./screenshots/Typed-First-Note.png)
+
+After saving, the database is updated and the note is visible on the front-end as well:
+![image](./screenshots/Saved-Note.png)
+
+The user is also able to delete notes by clicking the trash icon:
+![image](./screenshots/Deleted-Note.png)
+
+And the website is updated respectively. Finally, the user can view a previous note by clicking on it:
+![image](./screenshots/Final-Refocus.png)
+
 ## Testing <a name='testing'></a>
 This application has no tests.
 
